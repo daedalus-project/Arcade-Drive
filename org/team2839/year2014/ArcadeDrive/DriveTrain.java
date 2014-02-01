@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.team2839.year2014.arcade;
+package org.team2839.year2014.ArcadeDrive;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -29,9 +29,9 @@ public class DriveTrain {
         rightMotors.set(kStop);
     }
 
-    public void run(double leftSpeedMultiplier, double rightSpeedMultiplier) {
-        leftMotors.set(((driverJoy.getY() * leftSpeedMultiplier) + driverJoy.getX()));
-        rightMotors.set(((driverJoy.getY() * rightSpeedMultiplier) + driverJoy.getX()));
+    public void run(double leftSpeedMultiplier, double rightSpeedMultiplier, double turnSpeedMultiplier) {
+        leftMotors.set(((driverJoy.getY() * leftSpeedMultiplier) + (driverJoy.getX() * turnSpeedMultiplier)));
+        rightMotors.set(((driverJoy.getY() * rightSpeedMultiplier) + (driverJoy.getX() * turnSpeedMultiplier)));
     }
 
     public void displayMotorSpeeds() {

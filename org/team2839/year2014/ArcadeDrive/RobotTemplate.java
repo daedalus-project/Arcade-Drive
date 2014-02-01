@@ -5,7 +5,7 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package org.team2839.year2014.arcade;
+package org.team2839.year2014.ArcadeDrive;
 
 
 import edu.wpi.first.wpilibj.IterativeRobot;
@@ -41,7 +41,7 @@ public class RobotTemplate extends IterativeRobot {
      * This function is called periodically during operator control
      */
     public void teleopPeriodic() {
-        arcadeDrive.run(Constants.kLeftSpeed, Constants.kRightSpeed);
+        arcadeDrive.run(Constants.kLeftSpeed, Constants.kRightSpeed, Constants.kTurnSpeed);
         arcadeDrive.displayMotorSpeeds();
     }
     
